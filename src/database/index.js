@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv/config')
 
-mongoose.connect("mongodb+srv://bernardombsouza:analytics1995@hurbapi.hkgq1.mongodb.net/apiPrice?retryWrites=true&w=majority");
+mongoose.connect(process.env.DB_URL);
 mongoose.Promise = global.Promise;
 
 module.exports = mongoose;
